@@ -3,6 +3,7 @@
   padding: 0;
   font-size: 14px;
   text-decoration: none;
+  box-sizing: border-box;
 }
 
 :root {
@@ -21,7 +22,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Raleway&display=swap");
 
 body {
-  margin: 0 auto;
   font-family: "Open Sans", sans-serif;
   background-color: var(--main-background);
 }
@@ -33,15 +33,24 @@ nav {
   font-family: "Raleway", sans-serif;
   background-color: var(--intro-email-signup-background);
 }
+nav > img {
+  width: 150px;
+}
+nav > ul {
+  display: flex;
+  justify-content: flex-end;
+  width: 200px;
+}
 .nav-links > a {
   text-decoration: none;
-  margin-left: 40px;
+  margin-left: 3%;
   color: var(--neutral);
   font-size: 1rem;
 }
 
 /* intro styles */
 .intro {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,14 +73,16 @@ nav {
   font-weight: 700;
 }
 .intro-subtitle {
-  width: 30%;
+  min-width: 200px;
+  max-width: 600px;
   font-size: 1.2rem;
   color: var(--neutral);
   text-align: center;
-  padding-bottom: 2%;
+  padding: 0 20px 20px 20px;
 }
 .primary-button {
-  padding: 2% 5% 2%;
+  width: 300px;
+  height: 60px;
   background: linear-gradient(to right, var(--cyan), var(--blue));
   color: white;
   border-radius: 30px;
@@ -81,15 +92,23 @@ nav {
 
 /* services styles */
 .services {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-  grid-column-gap: 8%;
-  grid-row-gap: 20%;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: var(--main-background);
-  padding: 10% 0;
+  padding: 100px 0;
+  margin: 0 auto;
+}
+.service-top,
+.service-bottom {
+  display: flex;
+  justify-content: center;
 }
 .service {
+  flex-basis: 45%;
+  margin: 5%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -123,41 +142,58 @@ nav {
 
 /* productive styles */
 .productive {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-color: var(--main-background);
-  padding: 10% 10% 20% 10%;
-  grid-column-gap: 20%;
-  align-items: center;
+  width: 100%;
+  display: flex;
+  padding: 100px 10%;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
-.productive > div > p {
-  color: var(--neutral);
+.image-div {
+  flex-basis: 50%;
+}
+.image-div > img {
+  width: 100%;
+}
+.content-div {
+  flex-basis: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.content-div > span {
   text-align: start;
-  padding-bottom: 2%;
+  padding: 2%;
 }
-.productive > div > a {
+.productive-title {
+  font-size: 2.6rem;
+  color: var(--neutral);
+  font-weight: 700;
+}
+.see-how-works-url {
   color: var(--cyan);
+  padding: 2%;
   border-bottom: 1px solid var(--cyan);
-  text-decoration: none;
-  padding-bottom: 1%;
 }
-.fas {
-  font-size: 0.7rem;
+.see-how-works-url > .fas {
+  color: var(--cyan);
   margin-left: 1%;
+  font-size: 1rem;
 }
 /* testimonial styles */
 .testimonials {
-  width: 60%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 0 10% 10% 10%;
-  margin: 0 auto;
-  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px auto;
 }
 .testimonial {
+  width: 360px;
+  min-width: 325px;
   width: 25%;
   background-color: var(--intro-email-signup-background);
   padding: 3%;
+  margin: 2%;
 }
 .first::before {
   content: "“";
@@ -199,20 +235,26 @@ nav {
 }
 /* signup styles */
 .signup {
-  padding: 0% 10%;
+  padding: 100px 10%;
   display: flex;
   justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    var(--main-background) 0%,
+    var(--main-background) 50%,
+    var(--footer-background) 50%,
+    var(--footer-background) 100%
+  );
 }
 .signup-card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 50%;
+  max-width: 1000px;
+  min-width: 200px;
   padding: 6% 2%;
   background-color: var(--intro-email-signup-background);
   box-shadow: 4px -4px 20px 5px rgba(0, 0, 0, 0.2);
-  position: relative;
-  top: 180px;
 }
 .signup-title {
   color: var(--neutral);
@@ -230,20 +272,21 @@ nav {
   text-align: center;
 }
 .input-div {
-  width: 90%;
+  width: 100%;
   display: flex;
+  align-items: center;
   justify-content: center;
 }
 .input-box {
-  width: 50%;
+  min-width: 60%;
   border-radius: 25px;
-  padding: 2%;
+  padding: 20px;
   border: none;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 /* footer styles */
 footer {
-  padding: 24% 2% 1% 2%;
+  padding: 3%;
   background-color: var(--footer-background);
 }
 footer > img {
@@ -252,26 +295,27 @@ footer > img {
 .footer-links {
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding-bottom: 1%;
 }
 .location-div {
   display: flex;
-  width: 20%;
+  max-width: 300px;
   min-width: 80px;
+  margin: 20px 10px;
 }
 .location-div > p {
   text-align: start;
 }
 .location-div > i {
-  margin-right: 5%;
+  margin-right: 20px;
   margin-top: 2%;
 }
 .contact-div {
-  width: 10%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   color: var(--neutral);
+  margin: 20px 5px;
 }
 .contact-div > div > i {
   margin-right: 5%;
@@ -279,24 +323,25 @@ footer > img {
 }
 .link-set1,
 .link-set2 {
-  width: 10%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  margin: 20px;
 }
 .link-set1 > a,
 .link-set2 > a {
-  margin-bottom: 15%;
+  margin-bottom: 20px 10px;
   color: var(--neutral);
-  margin-right: 10%;
 }
 .social-link {
-  width: 8%;
   display: flex;
   justify-content: space-around;
+  margin: 20px 0;
 }
 .social-link > .fab {
   color: var(--neutral);
   font-size: 2rem;
+  padding: 10px;
 }
 .copyright {
   text-align: center;

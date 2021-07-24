@@ -18,6 +18,7 @@
 
     <!-- custom stylesheet -->
     <link rel="stylesheet" href="styles/index.css" />
+    <link rel="stylesheet" href="styles/mediaqueries.css" />
   </head>
   <body>
     <header>
@@ -48,57 +49,68 @@
       <!-- intro section end -->
       <!-- services section start -->
       <section class="services">
-        <div class="service item-access">
-          <img src="images/icon-access-anywhere.svg" alt="" />
-          <p class="service-title">Access your files, anywhere</p>
-          <p class="service-details">
-            The ability to use a smartphone, tablet, or computer to access your
-            account means your files follow you everywhere.
-          </p>
+        <div class="service-top">
+          <div class="service">
+            <img src="images/icon-access-anywhere.svg" alt="" />
+            <p class="service-title">Access your files, anywhere</p>
+            <p class="service-details">
+              The ability to use a smartphone, tablet, or computer to access
+              your account means your files follow you everywhere.
+            </p>
+          </div>
+          <div class="service">
+            <img src="images/icon-security.svg" alt="" />
+            <p class="service-title">Security you can trust</p>
+            <p class="service-details">
+              2-factor authentication and user-controlled encryption are just a
+              couple of the security features we allow to help secure your
+              files.
+            </p>
+          </div>
         </div>
-        <div class="service item-security">
-          <img src="images/icon-security.svg" alt="" />
-          <p class="service-title">Security you can trust</p>
-          <p class="service-details">
-            2-factor authentication and user-controlled encryption are just a
-            couple of the security features we allow to help secure your files.
-          </p>
-        </div>
-        <div class="service item-collaboration">
-          <img src="images/icon-collaboration.svg" alt="" />
-          <p class="service-title">Real-time collaboration</p>
-          <p class="service-details">
-            Securely share files and folders with friends, family and colleagues
-            for live collaboration. No email attachments required.
-          </p>
-        </div>
-        <div class="service item-store">
-          <img src="images/icon-any-file.svg" alt="" />
-          <p class="service-title">Store any type of file</p>
-          <p class="service-details">
-            Whether you're sharing holidays photos or work documents, Fylo has
-            you covered allowing for all file types to be securely stored and
-            shared.
-          </p>
+        <div class="service-bottom">
+          <div class="service">
+            <img src="images/icon-collaboration.svg" alt="" />
+            <p class="service-title">Real-time collaboration</p>
+            <p class="service-details">
+              Securely share files and folders with friends, family and
+              colleagues for live collaboration. No email attachments required.
+            </p>
+          </div>
+          <div class="service">
+            <img src="images/icon-any-file.svg" alt="" />
+            <p class="service-title">Store any type of file</p>
+            <p class="service-details">
+              Whether you're sharing holidays photos or work documents, Fylo has
+              you covered allowing for all file types to be securely stored and
+              shared.
+            </p>
+          </div>
         </div>
       </section>
       <!-- services section end -->
       <!-- productive section start -->
       <section class="productive">
-        <img src="images/illustration-stay-productive.png" alt="" />
-        <div>
-          <p class="intro-title">Stay productive,<br />wherever you are</p>
-          <p class="service-details">
+        <div class="image-div">
+          <img src="images/illustration-stay-productive.png" alt="" />
+        </div>
+        <div class="content-div">
+          <span class="productive-title"
+            >Stay productive, wherever you are</span
+          >
+          <span class="service-details">
             Never let location be an issue when accessing your files. Fylo has
             you covered for all of your file storage needs.
-          </p>
-          <p class="service-details">
+          </span>
+          <span class="service-details">
             Securely share files and folders with friends, family and colleagues
             for live collaboration. No email attachments required.
-          </p>
-          <a href=""
-            >see how Fylo works<i class="fas fa-arrow-alt-circle-right"></i
-          ></a>
+          </span>
+          <span>
+            <a class="see-how-works-url" href=""
+              >see how Fylo works<i class="fas fa-arrow-alt-circle-right"></i
+            ></a>
+          </span>
         </div>
       </section>
       <!-- productive section end -->
@@ -159,7 +171,7 @@
           </p>
           <div class="input-div">
             <input class="input-box" type="text" />
-            <button class="primary-button">Get Started For Free</button>
+            <button class="primary-button signup-button">Get Started For Free</button>
           </div>
         </div>
       </section>
