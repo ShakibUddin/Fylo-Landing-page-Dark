@@ -1,0 +1,311 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+:root {
+  --main-background: hsl(218, 28%, 13%);
+  --footer-background: hsl(216, 53%, 9%);
+  --intro-email-signup-background: hsl(217, 28%, 15%);
+  --testimonial-background: hsl(219, 30%, 18%);
+  --cyan: hsl(176, 68%, 64%);
+  --blue: hsl(198, 60%, 50%);
+  --neutral: hsl(0, 0%, 100%);
+  --error: hsl(0, 100%, 63%);
+  --details-text-color: hsl(0, 0%, 87%);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&family=Raleway&display=swap");
+
+body {
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--main-background);
+}
+/* nav styles */
+nav {
+  padding: 3% 5% 0;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--intro-email-signup-background);
+}
+.nav-links > a {
+  text-decoration: none;
+  margin-left: 40px;
+  color: var(--neutral);
+  font-size: 1rem;
+}
+
+/* intro styles */
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Raleway", sans-serif;
+  background-color: var(--intro-email-signup-background);
+  background-image: url("../images/bg-curvy-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  padding-bottom: 2%;
+}
+.intro > p {
+  color: var(--neutral);
+  text-align: center;
+  padding-bottom: 2%;
+}
+.intro-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.intro-subtitle {
+  width: 30%;
+  font-size: 1.2rem;
+  color: var(--neutral);
+  text-align: center;
+  padding-bottom: 2%;
+}
+.primary-button {
+  padding: 2% 5% 2%;
+  background: linear-gradient(to right, var(--cyan), var(--blue));
+  color: white;
+  border-radius: 30px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+/* services styles */
+.services {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-column-gap: 8%;
+  grid-row-gap: 20%;
+  background-color: var(--main-background);
+  padding: 10% 0;
+}
+.service {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.service-title,
+.service-details {
+  color: var(--neutral);
+  text-align: center;
+}
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+.service-details {
+  font-size: 1rem;
+  line-height: 30px;
+  color: var(--details-text-color);
+}
+.item-access {
+  grid-column-start: 2;
+}
+.item-security {
+  grid-column-start: 3;
+}
+.item-collaboration {
+  grid-column-start: 2;
+}
+.item-store {
+  grid-column-start: 3;
+}
+
+/* productive styles */
+.productive {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--main-background);
+  padding: 10% 10% 20% 10%;
+  grid-column-gap: 20%;
+  align-items: center;
+}
+.productive > div > p {
+  color: var(--neutral);
+  text-align: start;
+  padding-bottom: 2%;
+}
+.productive > div > a {
+  color: var(--cyan);
+  border-bottom: 1px solid var(--cyan);
+  text-decoration: none;
+  padding-bottom: 1%;
+}
+.fas {
+  font-size: 0.7rem;
+  margin-left: 1%;
+}
+/* testimonial styles */
+.testimonials {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10% 10% 10%;
+  margin: 0 auto;
+  position: relative;
+}
+.testimonial {
+  width: 25%;
+  background-color: var(--intro-email-signup-background);
+  padding: 3%;
+}
+.first::before {
+  content: "“";
+  display: block;
+  position: absolute;
+  color: var(--cyan);
+  font-size: 20rem;
+  top: -130px;
+  left: 10%;
+}
+.user-details {
+  display: flex;
+}
+.user-image {
+  margin-right: 5%;
+  width: 25px;
+  height: 25px;
+  border-radius: 13px;
+}
+.name-designation {
+  display: flex;
+  flex-direction: column;
+}
+.testimonial-details {
+  color: var(--neutral);
+  text-align: start;
+  font-size: 1rem;
+  line-height: 30px;
+  margin-bottom: 5%;
+}
+.user-name {
+  font-size: 0.9rem;
+  color: var(--neutral);
+  font-weight: 700;
+}
+.user-designation {
+  font-size: 0.6rem;
+  color: var(--neutral);
+}
+/* signup styles */
+.signup {
+  padding: 0% 10%;
+  display: flex;
+  justify-content: center;
+}
+.signup-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  padding: 6% 2%;
+  background-color: var(--intro-email-signup-background);
+  box-shadow: 4px -4px 20px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 180px;
+}
+.signup-title {
+  color: var(--neutral);
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2%;
+}
+.signup-details {
+  width: 70%;
+  font-size: 1rem;
+  color: var(--details-text-color);
+  line-height: 30px;
+  margin-bottom: 2%;
+  text-align: center;
+}
+.input-div {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.input-box {
+  width: 50%;
+  border-radius: 25px;
+  padding: 2%;
+  border: none;
+  margin-right: 30px;
+}
+/* footer styles */
+footer {
+  padding: 24% 2% 1% 2%;
+  background-color: var(--footer-background);
+}
+footer > img {
+  margin-bottom: 3%;
+}
+.footer-links {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-bottom: 1%;
+}
+.location-div {
+  display: flex;
+  width: 20%;
+  min-width: 80px;
+}
+.location-div > p {
+  text-align: start;
+}
+.location-div > i {
+  margin-right: 5%;
+  margin-top: 2%;
+}
+.contact-div {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+  color: var(--neutral);
+}
+.contact-div > div > i {
+  margin-right: 5%;
+  margin-bottom: 10%;
+}
+.link-set1,
+.link-set2 {
+  width: 10%;
+  display: flex;
+  flex-direction: column;
+}
+.link-set1 > a,
+.link-set2 > a {
+  margin-bottom: 15%;
+  color: var(--neutral);
+  margin-right: 10%;
+}
+.social-link {
+  width: 8%;
+  display: flex;
+  justify-content: space-around;
+}
+.social-link > .fab {
+  color: var(--neutral);
+  font-size: 2rem;
+}
+.copyright {
+  text-align: center;
+  color: var(--neutral);
+  font-size: 0.8rem;
+  position: relative;
+  bottom: 0;
+}
+.fas {
+  font-size: 1.5rem;
+  color: var(--neutral);
+}
